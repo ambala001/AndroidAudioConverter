@@ -1,16 +1,16 @@
 buildscript {
     repositories {
-        mavenCentral() // Use mavenCentral instead of jcenter()
+        mavenCentral() // Use mavenCentral() as the repository
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.2' // Updated Gradle plugin version to a valid one
+        classpath 'com.android.tools.build:gradle:7.0.4' // Use a compatible Gradle plugin version
     }
 }
 
 allprojects {
     repositories {
-        mavenCentral() // Use mavenCentral instead of jcenter()
-        maven { url "https://jitpack.io" } // Retain JitPack for additional dependencies
+        mavenCentral() // Use Maven Central
+        maven { url "https://jitpack.io" } // Include JitPack if necessary
     }
 }
 
@@ -18,7 +18,7 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 
-// Ensure the java block is correctly placed outside the task block.
+// Ensure Java compatibility
 java {
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11
