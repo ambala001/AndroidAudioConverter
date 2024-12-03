@@ -1,15 +1,15 @@
 buildscript {
     repositories {
-        jcenter()
+        mavenCentral() // Replace jcenter() with mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.0-rc2'
+        classpath 'com.android.tools.build:gradle:3.5.0' // Updated Gradle plugin version
     }
 }
 
 allprojects {
     repositories {
-        jcenter()
+        mavenCentral() // Replace jcenter() with mavenCentral()
         maven { url "https://jitpack.io" }
     }
 }
