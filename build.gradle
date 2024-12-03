@@ -20,4 +20,4 @@ task clean(type: Delete) {
 java {
     sourceCompatibility = JavaVersion.VERSION_11
     targetCompatibility = JavaVersion.VERSION_11
-}
+)
