@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        jdk 'Java 11' // Specify the configured JDK in Jenkins
+        jdk '11' // Specify the configured JDK in Jenkins
     }
 
     environment {
