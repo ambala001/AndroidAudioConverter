@@ -2,13 +2,12 @@ pipeline {
     agent any
 
     tools {
-        jdk '11' // Specify the configured JDK in Jenkins
+        jdk '11' // Ensure JDK 11 is configured in Jenkins
     }
 
     environment {
-        JAVA_HOME = '/path/to/java11' // Replace with the actual Java 11 path
+        JAVA_HOME = '/usr/lib/jvm/java-17-openjdk-amd64' // Adjusted for your system's Java installation
         PATH = "${env.JAVA_HOME}/bin:${env.PATH}"
-        GRADLE_OPTS = "-Dorg.gradle.daemon=false" // Disable Gradle daemon for consistent builds
     }
 
     stages {
@@ -51,7 +50,7 @@ pipeline {
     post {
         always {
             echo 'Cleaning up workspace...'
-            deleteDir() // Alternative to cleanWs if cleanWs plugin is unavailable
+            deleteDir() // Removes workspace files to free space
         }
         success {
             echo 'Build pipeline completed successfully!'
