@@ -1,8 +1,7 @@
 pipeline {
     agent any
     tools {
-        gradle 'Gradle 8.10'  // Updated to use Gradle 8.10
-        jdk '11'             // Updated to use Java 11
+        jdk '11'  // Use the available Java version on Jenkins
     }
     stages {
         stage('Checkout') {
