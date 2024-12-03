@@ -1,8 +1,8 @@
 pipeline {
     agent any
     tools {
-        gradle 'Gradle 7.0'
-        jdk 'Java 11'
+        gradle 'Gradle 8.10'  // Updated to use Gradle 8.10
+        jdk '11'             // Updated to use Java 11
     }
     stages {
         stage('Checkout') {
